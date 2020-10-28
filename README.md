@@ -5,11 +5,11 @@ Home: https://github.com/django/daphne
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/daphne-feedstock/blob/master/LICENSE.txt)
 
 Summary: Django ASGI (HTTP/WebSocket) server
 
-
+Development: https://github.com/django/daphne
 
 Current build status
 ====================
