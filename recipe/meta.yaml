@@ -1,19 +1,19 @@
 {% set name = "daphne" %}
-{% set version = "2.5.0" %}
+{% set version = "3.0.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 1ca46d7419103958bbc9576fb7ba3b25b053006e22058bc97084ee1a7d44f4ba
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: b43e70d74ff832a634ff6c92badd208824e4530e08b340116517e5aad0aca774
 
 build:
   number: 0
   entry_points:
     - daphne = daphne.cli:CommandLineInterface.entrypoint
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   noarch: python
 
 requirements:
@@ -35,12 +35,12 @@ test:
     - daphne --help
 
 about:
-  home: "https://github.com/django/daphne"
+  home: https://github.com/django/daphne
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: "Django ASGI (HTTP/WebSocket) server"
-  dev_url: "https://github.com/django/daphne"
+  summary: Django ASGI (HTTP/WebSocket) server
+  dev_url: https://github.com/django/daphne
 
 extra:
   recipe-maintainers:
