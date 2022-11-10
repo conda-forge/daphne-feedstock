@@ -10,7 +10,7 @@ source:
   sha256: cce9afc8f49a4f15d4270b8cfb0e0fe811b770a5cc795474e97e4da287497666
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - daphne = daphne.cli:CommandLineInterface.entrypoint
   script: {{ PYTHON }} -m pip install . --no-deps -vv
@@ -19,13 +19,17 @@ build:
 requirements:
   host:
     - pip
-    - python >=3
+    - python >=3.7
     - pytest-runner
   run:
-    - asgiref >=3.2,<4
-    - autobahn >=0.18
-    - python >=3
-    - twisted >=18.7
+    - asgiref >=3.5.2,<4
+    - autobahn >=22.4.2
+    - python >=3.7
+    - twisted >=22.4
+    # twisted[tls] extra dependencies
+    - pyopenssl >=16
+    - service_identity >=18.1
+    - idna >=2.4
 
 test:
   imports:
@@ -45,3 +49,4 @@ about:
 extra:
   recipe-maintainers:
     - chrisbarber
+    - swainn
