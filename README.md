@@ -146,4 +146,5 @@ Feedstock Maintainers
 =====================
 
 * [@chrisbarber](https://github.com/chrisbarber/)
+* [@swainn](https://github.com/swainn/)
 
