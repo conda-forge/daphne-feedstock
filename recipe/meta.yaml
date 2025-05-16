@@ -1,5 +1,5 @@
 {% set name = "daphne" %}
-{% set version = "4.1.2" %}
+{% set version = "4.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: fcbcace38eb86624ae247c7ffdc8ac12f155d7d19eafac4247381896d6f33761
+  sha256: c055de9e685cab7aa369e25e16731baa9b310b9db1a76886dbdde0b4456fb056
 
 build:
-  number: 1
+  number: 0
   entry_points:
     - daphne = daphne.cli:CommandLineInterface.entrypoint
   script: {{ PYTHON }} -m pip install . --no-deps -vv
